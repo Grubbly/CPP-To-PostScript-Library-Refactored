@@ -1,0 +1,27 @@
+%!PS-Adobe-3.0
+%%Pages: 1
+%%EndComments
+
+
+
+ 						 /inch {72 mul} def
+
+/renderCircle { %Parameter order: x, y, radius
+		
+		/radius   exch def
+		/drawPosY exch def
+		/drawPosX exch def
+		
+		drawPosX drawPosY radius 0 360 arc
+		
+	} def
+
+
+%%Page: 1 1
+
+gsave
+72.000000 72.000000 12.000000 renderCircle
+
+stroke
+grestore
+showpage

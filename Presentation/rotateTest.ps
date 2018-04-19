@@ -1,0 +1,27 @@
+/aRect {
+    newpath
+    0 0 0 setrgbcolor
+    /lowerLeftX 134.000000 def
+    /lowerLeftY 139.000000 def
+    /width 20.000000 def
+    /height 10.000000 def
+    lowerLeftX lowerLeftY moveto
+    0 height rlineto
+    width 0 rlineto
+    0 -1 height mul rlineto
+    closepath
+    stroke
+} def
+
+
+
+
+
+gsave
+						aRect
+                        144.000000 144.000000 translate
+                        90 rotate
+                        -144.000000 -144.000000 translate
+                        aRect
+                        stroke
+                        grestore

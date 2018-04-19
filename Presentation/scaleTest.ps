@@ -1,0 +1,42 @@
+/aRect {
+    newpath
+    0 0 0 setrgbcolor
+    /lowerLeftX 134.000000 def
+    /lowerLeftY 139.000000 def
+    /width 20.000000 def
+    /height 10.000000 def
+    lowerLeftX lowerLeftY moveto
+    0 height rlineto
+    width 0 rlineto
+    0 -1 height mul rlineto
+    closepath
+    stroke
+} def
+
+
+/compareRect {
+    newpath
+    0 0 0 setrgbcolor
+    /lowerLeftX 134.000000 def
+    /lowerLeftY 139.000000 def
+    /width 20.000000 def
+    /height 10.000000 def
+    lowerLeftX lowerLeftY moveto
+    0 height rlineto
+    width 0 rlineto
+    0 -1 height mul rlineto
+    closepath
+    stroke
+} def
+
+
+	gsave
+	compareRect
+	stroke
+	grestore
+
+	gsave
+    2.000000 2.000000 scale
+    aRect
+    stroke
+    grestore

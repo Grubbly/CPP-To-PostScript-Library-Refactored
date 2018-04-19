@@ -1,0 +1,51 @@
+%!PS-Adobe-3.0
+%%Pages: 1
+%%EndComments
+
+
+
+ 						 /inch {72 mul} def
+
+/ngon { %Parameter order: xPosOrigin, yPosOrigin, sides, sideLen
+		newpath
+
+		/sideLen 				exch def
+		/sides 					exch def
+		/yPosOrigin 			exch def
+		/xPosOrigin 			exch def
+		/regularAngle 360 sides div def
+
+		xPosOrigin yPosOrigin 	moveto
+		sideLen sideLen 	  	scale
+		1 sideLen inch		  	div setlinewidth % Counterbalances the scaling to prevent fat lines
+
+		1 1 sides{
+		/vertex exch def
+		/theta vertex regularAngle mul def
+		theta cos theta sin rlineto
+		} for
+		closepath
+
+	} def
+
+
+%%Page: 1 1
+
+gsave
+5.000000 inch 2.000000 inch 3 1.000000 inch ngon
+stroke
+grestore
+gsave
+5.000000 inch 2.866025 inch 4 1.000000 inch ngon
+stroke
+grestore
+gsave
+5.000000 inch 3.866025 inch 5 1.000000 inch ngon
+stroke
+grestore
+gsave
+5.000000 inch 5.404867 inch 7 1.000000 inch ngon
+stroke
+grestore
+
+showpage
